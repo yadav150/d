@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QR Generator – Tools By Dav</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet" />
+  <!-- QRCode.js library (lightweight, fast) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <!-- ===== SCROLL PROGRESS BAR ===== -->
+  <div id="scroll-progress"></div>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="logo"><a href="../index.html">Tools By Dav</a></div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../index.html#tools">Tools</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ===== MOBILE OVERLAY ===== -->
+  <div class="mobile-overlay" id="mobileOverlay">
+    <button class="close-btn" id="closeMenu">&times;</button>
+    <a href="../index.html">Home</a>
+    <a href="../index.html#tools">Tools</a>
+    <a href="../index.html#contact">Contact</a>
+  </div>
+
+  <!-- ===== TOOL PAGE CONTENT ===== -->
+  <main class="tool-page">
+    <a href="../index.html#tools" class="back-link">← Back to Tools</a>
+
+    <div class="tool-container">
+      <h2>📱 QR Generator</h2>
+      <p class="tool-desc">Enter any text or URL and generate a QR code instantly. Download it as PNG.</p>
+
+      <!-- Input -->
+      <div class="qr-input-group">
+        <input type="text" id="qrInput" placeholder="Type or paste text / URL..." value="https://toolsbydav.com" />
+        <button id="generateBtn">Generate QR</button>
+      </div>
+
+      <!-- Output -->
+      <div class="qr-output">
+        <div id="qrcode">
+          <div class="qr-placeholder">Enter text &amp; click Generate</div>
+        </div>
+        <button class="download-btn" id="downloadBtn" disabled>⬇️ Download PNG</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2026 <a href="../index.html">Tools By Dav</a> — built with ❤️ for everyone.</p>
+  </footer>
+
+  <script src="../main.js"></script>
+  <script src="../tools-js/qr-generator.js"></script>
+</body>
+</html>
