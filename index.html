@@ -1,93 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tools By Dav – Free Online Tools</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-  <!-- ===== SCROLL PROGRESS BAR ===== -->
-  <div id="scroll-progress"></div>
-
-  <!-- ===== HEADER ===== -->
-  <header>
-    <div class="logo"><a href="index.html">Tools By Dav</a></div>
-
-    <!-- Desktop Nav -->
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="#tools">Tools</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-
-    <!-- Hamburger -->
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </header>
-
-  <!-- ===== MOBILE OVERLAY ===== -->
-  <div class="mobile-overlay" id="mobileOverlay">
-    <button class="close-btn" id="closeMenu">&times;</button>
-    <a href="index.html">Home</a>
-    <a href="#tools">Tools</a>
-    <a href="#contact">Contact</a>
+<!-- For pages inside /tools/ folder, use this instead: -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo-text">Tools<span>By</span>Dav</div>
+      <p class="tagline">Free, fast, and privacy-first online tools for everyone.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <a href="/index.html">Home</a>
+      <a href="/index.html#tools">All Tools</a>
+      <a href="/legal/contact.html">Contact</a>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <a href="/legal/privacy.html">Privacy Policy</a>
+      <a href="/legal/terms.html">Terms of Service</a>
+      <a href="/legal/disclaimer.html">Disclaimer</a>
+    </div>
+    <div>
+      <h4>Reach Us</h4>
+      <a href="mailto:hello@toolsbydav.com">hello@toolsbydav.com</a>
+      <p style="margin-top: 0.3rem; font-size: 0.85rem; color: var(--text-muted);">Response within 24h</p>
+    </div>
   </div>
-
-  <!-- ===== MAIN CONTENT ===== -->
-  <main>
-
-    <!-- Hero intro -->
-    <section>
-      <h1 class="section-title fade-in">Welcome to <br />Tools By Dav</h1>
-      <p class="section-sub fade-in">Simple, fast, and free online utilities to make your day easier.</p>
-    </section>
-
-    <!-- ===== TOOLS SECTION (soft dark red) ===== -->
-    <section class="tools-section" id="tools">
-      <h2 class="section-title fade-in">⚙️ Our Available Tools</h2>
-      <p class="section-sub fade-in">Click any card to open the tool. More coming soon!</p>
-
-      <div class="tools-grid">
-        <!-- Tool 1 -->
-        <a href="tools/color-picker.html" class="tool-card fade-in">
-          <h3>🎨 Color Picker</h3>
-          <p>Pick, copy, and convert HEX/RGB colors instantly.</p>
-        </a>
-
-        <!-- Tool 2 -->
-        <a href="tools/qr-generator.html" class="tool-card fade-in">
-          <h3>📱 QR Generator</h3>
-          <p>Generate QR codes from any text or URL.</p>
-        </a>
-
-        <!-- Tool 3 -->
-        <a href="tools/word-counter.html" class="tool-card fade-in">
-          <h3>📝 Word Counter</h3>
-          <p>Count words, characters, and sentences in real‑time.</p>
-        </a>
-      </div>
-    </section>
-
-    <!-- Contact / footer placeholder -->
-    <section id="contact" style="padding-bottom: 1rem;">
-      <h2 class="section-title fade-in">📬 Let’s Connect</h2>
-      <p class="section-sub fade-in">Have a suggestion? Reach out anytime.</p>
-    </section>
-
-  </main>
-
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <p>&copy; 2026 <a href="index.html">Tools By Dav</a> — built with ❤️ for everyone.</p>
-  </footer>
-
-  <!-- ===== MAIN JS ===== -->
-  <script src="main.js"></script>
-</body>
-</html>
+  <div class="footer-bottom">
+    &copy; 2026 <a href="/index.html">Tools By Dav</a>. Built with love for the community.
+  </div>
+</footer>
