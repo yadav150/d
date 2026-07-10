@@ -7,7 +7,6 @@ window.addEventListener('scroll', () => {
   const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
   progressBar.style.width = progress + '%';
 
-  // fade when at top or bottom
   if (scrollTop < 10 || progress >= 99) {
     progressBar.classList.add('fade');
   } else {
@@ -15,20 +14,16 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// ===== 2. FADE-IN ON SCROLL (Intersection Observer) =====
+// ===== 2. FADE-IN ON SCROLL =====
 const fadeElements = document.querySelectorAll('.fade-in');
-
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
+    if (entry.isIntersecting) entry.target.classList.add('visible');
   });
-}, { threshold: 0.15 });
-
+}, { threshold: 0.15, rootMargin: '0px 0px -20px 0px' });
 fadeElements.forEach(el => observer.observe(el));
 
-// ===== 3. HAMBURGER TOGGLE =====
+// ===== 3. HAMBURGER TOGGLE (Fixed: opens & closes reliably) =====
 const hamburger = document.getElementById('hamburger');
 const overlay = document.getElementById('mobileOverlay');
 const closeBtn = document.getElementById('closeMenu');
@@ -45,15 +40,23 @@ function closeMenuFn() {
   document.body.style.overflow = '';
 }
 
+// Open
 hamburger.addEventListener('click', openMenu);
+
+// Close: button
 closeBtn.addEventListener('click', closeMenuFn);
 
-// Close overlay when a link is clicked
+// Close: clicking on any link inside overlay
 overlay.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', closeMenuFn);
 });
 
-// Close on Escape key
+// Close: pressing Escape key
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeMenuFn();
+});
+
+// Close: clicking on the backdrop itself (the overlay background)
+overlay.addEventListener('click', (e) => {
+  if (e.target === overlay) closeMenuFn();
 });
