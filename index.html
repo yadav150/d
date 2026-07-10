@@ -1,29 +1,98 @@
-<!-- For pages inside /tools/ folder, use this instead: -->
-<footer class="site-footer">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <div class="logo-text">Tools<span>By</span>Dav</div>
-      <p class="tagline">Free, fast, and privacy-first online tools for everyone.</p>
-    </div>
-    <div>
-      <h4>Quick Links</h4>
-      <a href="/index.html">Home</a>
-      <a href="/index.html#tools">All Tools</a>
-      <a href="/legal/contact.html">Contact</a>
-    </div>
-    <div>
-      <h4>Legal</h4>
-      <a href="/legal/privacy.html">Privacy Policy</a>
-      <a href="/legal/terms.html">Terms of Service</a>
-      <a href="/legal/disclaimer.html">Disclaimer</a>
-    </div>
-    <div>
-      <h4>Reach Us</h4>
-      <a href="mailto:hello@toolsbydav.com">hello@toolsbydav.com</a>
-      <p style="margin-top: 0.3rem; font-size: 0.85rem; color: var(--text-muted);">Response within 24h</p>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tools By Dav – Free Online Tools</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="scroll-progress"></div>
+
+  <header>
+    <div class="logo"><a href="index.html">Tools<span>By</span>Dav</a></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="mobile-overlay" id="mobileOverlay">
+    <button class="close-btn" id="closeMenu" aria-label="Close menu">&times;</button>
+    <a href="index.html">Home</a>
+    <a href="#tools">Tools</a>
+    <a href="#contact">Contact</a>
   </div>
-  <div class="footer-bottom">
-    &copy; 2026 <a href="/index.html">Tools By Dav</a>. Built with love for the community.
-  </div>
-</footer>
+
+  <main>
+    <section>
+      <h1 class="section-title fade-in">Welcome to <br />Tools<span style="color:var(--accent)">By</span>Dav</h1>
+      <p class="section-sub fade-in">Simple, fast, and free online utilities — no sign-up required.</p>
+    </section>
+
+    <section class="tools-section" id="tools">
+      <div class="fade-in">
+        <span class="section-badge">Our Available Tools</span>
+        <p class="section-sub">Click any card to open the tool. More coming soon!</p>
+      </div>
+      <div class="tools-grid">
+        <a href="tools/color-picker.html" class="tool-card fade-in">
+          <h3>Color Picker</h3>
+          <p>Pick, copy, and convert HEX/RGB colors instantly.</p>
+        </a>
+        <a href="tools/qr-generator.html" class="tool-card fade-in">
+          <h3>QR Generator</h3>
+          <p>Generate QR codes from any text or URL.</p>
+        </a>
+        <a href="tools/word-counter.html" class="tool-card fade-in">
+          <h3>Word Counter</h3>
+          <p>Count words, characters, and sentences in real-time.</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="contact" style="padding-bottom: 0.5rem;">
+      <h2 class="section-title fade-in">Let's Connect</h2>
+      <p class="section-sub fade-in">Have a suggestion or feedback? Reach out anytime.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-text">Tools<span>By</span>Dav</div>
+        <p class="tagline">Free, fast, and privacy-first online tools for everyone.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="#tools">All Tools</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Disclaimer</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:hello@toolsbydav.com">hello@toolsbydav.com</a>
+        <p style="margin-top: 0.3rem; font-size: 0.85rem; color: var(--text-muted);">Response within 24h</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 <a href="index.html">Tools By Dav</a>. Built with love for the community.
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
