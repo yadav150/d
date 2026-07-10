@@ -312,3 +312,141 @@ footer a {
     font-size: 1.6rem;
   }
 }
+/* ============================================================
+   TOOL PAGE – COMMON STYLES (append to style.css)
+   ============================================================ */
+
+.tool-page {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: var(--dark-red-soft);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-smooth);
+}
+.back-link:hover {
+  color: var(--dark-red-light);
+}
+
+.tool-container {
+  background: #faf8f6;
+  padding: 2.5rem 2rem;
+  border-radius: var(--radius-universal);
+  box-shadow: var(--shadow);
+}
+
+.tool-container h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+.tool-container .tool-desc {
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+/* ---- Color Picker specific ---- */
+.color-display {
+  width: 100%;
+  height: 160px;
+  border-radius: var(--radius-universal);
+  background: #ff5733;
+  margin-bottom: 1.8rem;
+  transition: background 0.2s ease;
+  border: 2px solid rgba(0,0,0,0.06);
+}
+
+.color-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: flex-end;
+}
+
+.color-controls label {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.color-controls input[type="color"] {
+  width: 70px;
+  height: 50px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background: none;
+  border-radius: var(--radius-button);
+}
+
+.color-values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: 1.8rem;
+  padding-top: 1.8rem;
+  border-top: 1px solid #e6e2dc;
+}
+
+.color-values .value-box {
+  background: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius-universal);
+  font-size: 0.95rem;
+  border: 1px solid #e0dbd4;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.color-values .value-box span {
+  font-weight: 600;
+  color: var(--dark-red-soft);
+}
+.color-values .value-box code {
+  background: #f1eeea;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-button);
+  font-size: 0.9rem;
+  font-family: monospace;
+}
+
+.copy-btn {
+  background: var(--dark-red-soft);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.4rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background var(--transition-smooth), transform 0.15s;
+  border-radius: var(--radius-button) !important;
+}
+.copy-btn:hover {
+  background: var(--dark-red-light);
+  transform: scale(0.97);
+}
+.copy-btn.copied {
+  background: #2a7a4a;
+}
+
+@media (max-width: 600px) {
+  .tool-container {
+    padding: 1.5rem 1rem;
+  }
+  .color-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .color-values {
+    flex-direction: column;
+  }
+}
