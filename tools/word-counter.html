@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Word Counter – Tools By Dav</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <!-- ===== SCROLL PROGRESS BAR ===== -->
+  <div id="scroll-progress"></div>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="logo"><a href="/index.html">Tools<span>By</span>Dav</a></div>
+    <ul class="nav-links">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/index.html#tools">Tools</a></li>
+      <li><a href="/legal/contact.html">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ===== MOBILE OVERLAY ===== -->
+  <div class="mobile-overlay" id="mobileOverlay">
+    <button class="close-btn" id="closeMenu" aria-label="Close menu">&times;</button>
+    <a href="/index.html">Home</a>
+    <a href="/index.html#tools">Tools</a>
+    <a href="/legal/contact.html">Contact</a>
+  </div>
+
+  <!-- ===== TOOL PAGE CONTENT ===== -->
+  <main class="tool-page word-counter">
+    <a href="/index.html#tools" class="back-link">← Back to Tools</a>
+
+    <div class="tool-container">
+      <h2>Word Counter</h2>
+      <p class="tool-desc">Paste or type your text below. Stats update instantly as you type.</p>
+
+      <!-- Textarea -->
+      <textarea id="textInput" placeholder="Type or paste your text here..." spellcheck="true"></textarea>
+
+      <!-- Stats Grid -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number" id="wordCount">0</div>
+          <div class="stat-label">Words</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="charCount">0</div>
+          <div class="stat-label">Characters</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="charNoSpaceCount">0</div>
+          <div class="stat-label">Chars (no spaces)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="sentenceCount">0</div>
+          <div class="stat-label">Sentences</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="paragraphCount">0</div>
+          <div class="stat-label">Paragraphs</div>
+        </div>
+      </div>
+
+      <!-- Clear Button -->
+      <button class="clear-btn" id="clearBtn">Clear Text</button>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER (absolute paths) ===== -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-text">Tools<span>By</span>Dav</div>
+        <p class="tagline">Free, fast, and privacy-first online tools for everyone.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="/index.html">Home</a>
+        <a href="/index.html#tools">All Tools</a>
+        <a href="/legal/contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="/legal/privacy.html">Privacy Policy</a>
+        <a href="/legal/terms.html">Terms of Service</a>
+        <a href="/legal/disclaimer.html">Disclaimer</a>
+      </div>
+      <div>
+        <h4>Reach Us</h4>
+        <a href="mailto:hello@toolsbydav.com">hello@toolsbydav.com</a>
+        <p style="margin-top: 0.3rem; font-size: 0.85rem; color: var(--text-muted);">Response within 24h</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 <a href="/index.html">Tools By Dav</a>. Built with love for the community.
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+  <script src="../tools-js/word-counter.js"></script>
+</body>
+</html>
