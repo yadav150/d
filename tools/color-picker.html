@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Color Picker – Tools By Dav</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <!-- ===== SCROLL PROGRESS BAR ===== -->
+  <div id="scroll-progress"></div>
+
+  <!-- ===== HEADER (same as homepage) ===== -->
+  <header>
+    <div class="logo"><a href="../index.html">Tools By Dav</a></div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../index.html#tools">Tools</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ===== MOBILE OVERLAY ===== -->
+  <div class="mobile-overlay" id="mobileOverlay">
+    <button class="close-btn" id="closeMenu">&times;</button>
+    <a href="../index.html">Home</a>
+    <a href="../index.html#tools">Tools</a>
+    <a href="../index.html#contact">Contact</a>
+  </div>
+
+  <!-- ===== TOOL PAGE CONTENT ===== -->
+  <main class="tool-page">
+    <a href="../index.html#tools" class="back-link">← Back to Tools</a>
+
+    <div class="tool-container">
+      <h2>🎨 Color Picker</h2>
+      <p class="tool-desc">Pick a color, then copy HEX or RGB values with one click.</p>
+
+      <!-- Color display -->
+      <div class="color-display" id="colorDisplay"></div>
+
+      <!-- Controls -->
+      <div class="color-controls">
+        <label>
+          Pick color
+          <input type="color" id="colorPicker" value="#ff5733" />
+        </label>
+        <button class="copy-btn" id="copyHexBtn">📋 Copy HEX</button>
+        <button class="copy-btn" id="copyRgbBtn">📋 Copy RGB</button>
+      </div>
+
+      <!-- Values -->
+      <div class="color-values">
+        <div class="value-box">HEX <code id="hexValue">#ff5733</code></div>
+        <div class="value-box">RGB <code id="rgbValue">rgb(255, 87, 51)</code></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2026 <a href="../index.html">Tools By Dav</a> — built with ❤️ for everyone.</p>
+  </footer>
+
+  <script src="../main.js"></script>
+  <script src="../tools-js/color-picker.js"></script>
+</body>
+</html>
