@@ -450,3 +450,95 @@ footer a {
     flex-direction: column;
   }
 }
+/* ============================================================
+   QR GENERATOR – TOOL SPECIFIC STYLES
+   ============================================================ */
+
+.qr-input-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.qr-input-group input[type="text"] {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.75rem 1rem;
+  border: 2px solid #ddd;
+  border-radius: var(--radius-universal);
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color var(--transition-smooth);
+  background: #fff;
+}
+.qr-input-group input[type="text"]:focus {
+  outline: none;
+  border-color: var(--dark-red-soft);
+}
+
+.qr-input-group button {
+  background: var(--dark-red-soft);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background var(--transition-smooth), transform 0.15s;
+  border-radius: var(--radius-button) !important;
+  font-size: 1rem;
+}
+.qr-input-group button:hover {
+  background: var(--dark-red-light);
+  transform: scale(0.97);
+}
+
+.qr-output {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+}
+
+#qrcode {
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: var(--radius-universal);
+  box-shadow: var(--shadow);
+  display: inline-block;
+}
+#qrcode img,
+#qrcode canvas {
+  display: block !important;
+  max-width: 100%;
+  height: auto;
+}
+
+.download-btn {
+  background: #2a7a4a;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background var(--transition-smooth), transform 0.15s;
+  border-radius: var(--radius-button) !important;
+  font-size: 0.95rem;
+}
+.download-btn:hover {
+  background: #1f5f38;
+  transform: scale(0.97);
+}
+.download-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.qr-placeholder {
+  color: #999;
+  font-size: 0.95rem;
+  padding: 2rem 0;
+}
